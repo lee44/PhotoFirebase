@@ -21,20 +21,13 @@
   grid-gap: 40px;
 }
 .img-wrap {
-  overflow: hidden;
-
-  padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
-  position: relative;
-  opacity: 0.8;
+  width: 100px;
+  height: 100px;
 }
-.img-wrap img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
-  position: absolute;
-  top: 0;
-  left: 0;
+img {
+  object-fit: contain;
+  width: 300px;
+  height: 300px;
 }
 
 /* modal styles */
