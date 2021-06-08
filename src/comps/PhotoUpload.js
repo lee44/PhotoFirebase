@@ -3,6 +3,7 @@ import Title from "./Title";
 import UploadForm from "./UploadForm";
 import ImageGrid from "./ImageGrid";
 import Modal from "./Modal";
+import { Container } from "react-bootstrap";
 
 function PhotoUpload() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -10,11 +11,13 @@ function PhotoUpload() {
   return (
     <>
       <Title />
-      <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg} />
-      {selectedImg && (
-        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      )}
+      <Container className="d-flex flex-column align-items-center justify-content-center">
+        <UploadForm />
+        <ImageGrid setSelectedImg={setSelectedImg} />
+        {selectedImg && (
+          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+        )}
+      </Container>
     </>
   );
 }

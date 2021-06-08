@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Navbar } from "react-bootstrap";
 
 const Title = () => {
   return (
-    <div className="title">
-      <h1>FireGram</h1>
-      <h2>Your Pictures</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  )
-}
+    <Navbar>
+      <Navbar.Brand className="ms-5" expand="lg">
+        Photobase
+      </Navbar.Brand>
+    </Navbar>
+  );
+};
 
 export default Title;

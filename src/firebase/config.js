@@ -17,7 +17,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //
-const auth = app.auth();
+const auth = firebase.auth();
 //Access to firebase storage
 const projectStorage = firebase.storage();
 //Access to firebase database
