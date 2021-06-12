@@ -51,13 +51,12 @@ const UploadForm = () => {
           <ImageInput type="file" onChange={handleChange} />
           <span style={{ margin: "0 0 0 5.5px" }}>+</span>
         </Label>
-
-        <div className="output">
-          {error && <div className="error">{error}</div>}
-          {file && <div>{file.name}</div>}
-          {file && <ProgressBar file={file} setFile={setFile} />}
-        </div>
       </Form>
+      <div className="output mt-3">
+        {error && <h5 className="error">{error}</h5>}
+        {file && <h5>{file.name}</h5>}
+      </div>
+      {file && <ProgressBar file={file} setFile={setFile} />}
     </>
   );
 };
