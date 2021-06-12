@@ -20,12 +20,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
 }
-.img-wrap {
-  width: 100px;
-  height: 100px;
-}
-img {
-  object-fit: contain;
+.img-grid img {
+  object-fit: cover;
   width: 300px;
   height: 300px;
 }

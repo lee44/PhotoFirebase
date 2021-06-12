@@ -9,9 +9,12 @@ const ImageGrid = ({ setSelectedImg }) => {
     <div className="img-grid">
       {docs &&
         docs.map((doc) => (
-          <img
+          <motion.img
             src={doc.url}
             alt="uploaded pic"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
             onClick={() => setSelectedImg(doc.url)}
           />
         ))}
